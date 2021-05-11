@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php  include('nav.php');
+?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -29,7 +31,6 @@
   </body>
 </html>
 <?php
-include('nav.php');
 $query = "INSERT into `users` (name, password, email)
 VALUES ('$name', '$password', '$email')";
 $result = mysqli_query($conn,$query);
