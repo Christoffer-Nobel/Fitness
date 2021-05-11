@@ -29,3 +29,5 @@ include("functions.php");
 connect();
 
 ?>
+
+et eller andet lort.
