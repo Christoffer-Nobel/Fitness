@@ -39,13 +39,14 @@ return $product;
 function get_fac(){
 
 global $conn;
+$products = [];
 
-$sql =  "SELECT fac_ id, fac_name FROM facility WHERE fac_id > 0";
+$sql =  "SELECT fac_id, fac_name FROM facility WHERE fac_id > 0";
 
 $result = mysqli_query($conn, $sql);
-
-$products = [];
-if(mysqli_num_rows($result) > 0){
+if (false===$result) {
+  printf(mysqli_error($conn));
+} elseif(mysqli_num_rows($result) > 0){
   while($row = mysqli_fetch_assoc($result)){
 
     $products[] = $row;

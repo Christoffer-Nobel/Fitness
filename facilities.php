@@ -1,8 +1,10 @@
 <?php
-include('nav.php');
+include('connect.php');
 
-$products = get_fac();
+$facs = get_fac();
 
-
-debug($products);
+foreach($facs as $fac){
+  echo $fac["fac_name"];
 ?>
+<br>
+<?php } ?>
