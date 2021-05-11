@@ -1,5 +1,5 @@
 <?php
 include('nav.php');
 $products = get_fac();
-echo $products[1]["fac_id"];
+echo $products[0]["fac_id"];
 ?>
