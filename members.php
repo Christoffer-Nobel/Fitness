@@ -9,7 +9,7 @@
 
       <div class="create-user-form">
         <h2>Create user</h2>
-          <form method="post">
+          <form  action="members.inc.php" method="POST">
             <input type="text" name="fname" placeholder="First name"><br>
             <input type="text" name="lname" placeholder="Last name"><br>
             <input type="tel" name="phone_number" placeholder="Phone number"><br>
@@ -26,17 +26,7 @@
             <button type="submit" name="submit">Create</button><br>
           </form>
       </div>
-
+<?php
+include('nav.php'); ?>
   </body>
 </html>
-<?php  include('nav.php');
-$query = "INSERT into `members` (first_name, last_name, phone_number, email, postal, adress, dob, role)
-VALUES ('$name', '$password', '$email')";
-$result = mysqli_query($conn,$query);
-if($result){
-  header("location: ./index.php?p=8");
-  exit;
-} else{
-  echo "Noget gik galt. Prøv igen eller ring til Kenneth for hjælp";
-}
-  ?>
