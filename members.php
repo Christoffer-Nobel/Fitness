@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<?php
-include('nav.php');
-?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -31,3 +28,13 @@ include('nav.php');
 
   </body>
 </html>
+<?php
+$query = "INSERT into `users` (name, password, email)
+VALUES ('$name', '$password', '$email')";
+$result = mysqli_query($conn,$query);
+if($result){
+  header("location: ./index.php?p=8");
+  exit;
+} else{
+  echo "Noget gik galt. Prøv igen eller ring til Kenneth for hjælp";
+  ?>
