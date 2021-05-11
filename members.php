@@ -30,7 +30,7 @@
   </body>
 </html>
 <?php  include('nav.php');
-$query = "INSERT into `users` (name, password, email)
+$query = "INSERT into `members` (first_name, last_name, phone_number, email, postal, adress, dob, role)
 VALUES ('$name', '$password', '$email')";
 $result = mysqli_query($conn,$query);
 if($result){
