@@ -1,8 +1,8 @@
+
 <!DOCTYPE html>
-<?php  include('nav.php');
-?>
 <html lang="en" dir="ltr">
-  <head>
+  <head> <?php  include('nav.php');
+  ?>
     <meta charset="utf-8">
     <title></title>
   </head>
