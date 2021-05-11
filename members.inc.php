@@ -10,6 +10,9 @@ $dob = $_POST['dob'];
 $role = $_POST['role'];
 
 $sql = "INSERT INTO members (first_name, last_name, phone_number, email, postal, adress, dob, role) VALUES ('$first', '$last', '$phone_number', '$email', '$postal', '$adress', '$dob', '$role');";
-mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sql);
+if (false===$result) {
+  printf(mysqli_error($conn));
+}
 
-// header("Location: ./members.php");
+header("Location: ./members.php");
