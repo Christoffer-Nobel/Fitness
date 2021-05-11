@@ -29,6 +29,7 @@
   </body>
 </html>
 <?php
+include('nav.php');
 $query = "INSERT into `users` (name, password, email)
 VALUES ('$name', '$password', '$email')";
 $result = mysqli_query($conn,$query);
@@ -37,4 +38,5 @@ if($result){
   exit;
 } else{
   echo "Noget gik galt. Prøv igen eller ring til Kenneth for hjælp";
+}
   ?>
