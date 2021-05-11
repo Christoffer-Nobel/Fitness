@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head> 
+  <head>
     <meta charset="utf-8">
     <title></title>
   </head>
@@ -14,7 +14,7 @@
             <input type="text" name="lname" placeholder="Last name"><br>
             <input type="tel" name="phone_number" placeholder="Phone number"><br>
             <input type="email" name="email" placeholder="e-mail"><br>
-            <input type="number" name="postal" placeholder="Postal" min="4" max="4"><br>
+            <input type="number" name="postal" placeholder="Postal" min="1000" max="9999"><br>
             <input type="text" name="adress" placeholder="Adress"><br>
             <input type="date" name="dob" placeholder="Date of birth"><br>
             <input type="radio" id="member" name="role" value="1">
