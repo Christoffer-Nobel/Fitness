@@ -1,5 +1,5 @@
 <?php
-
+include('nav.php'); 
 $first = $_POST['fname'];
 $last = $_POST['lname'];
 $phone_number = $_POST['phone_number'];
