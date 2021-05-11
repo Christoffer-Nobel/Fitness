@@ -10,4 +10,5 @@ function connect(){
   //tester om  der er fejl i databaseforbindelse
  if(!$conn){
   die(mysqli_error($conn));
-  }
+}
+}
