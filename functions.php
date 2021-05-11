@@ -18,30 +18,31 @@ function connect(){
   //vælge den database vi gerne vil bruge
   mysqli_select_db($conn, DBNAME);
 }
-
-/*function get_fa(){
+function get_equip(){
 
 global $conn;
+$products = [];
 
-$sql = "SELECT fac_name FROM facility WHERE fac_id > 0";
+$sql =  "SELECT fac_id, fac_name, opening_hours, type FROM facilities_equipment WHERE fac_id > 0";
 
 $result = mysqli_query($conn, $sql);
-
-$product = [];
-if(mysqli_num_rows($result) > 0){
+if (false===$result) {
+  printf(mysqli_error($conn));
+} elseif(mysqli_num_rows($result) > 0){
   while($row = mysqli_fetch_assoc($result)){
-    $product[] = $row;
+
+    $products[] = $row;
   }
   }
-return $product;
+return $products;
 }
-*/
+
 function get_fac(){
 
 global $conn;
 $products = [];
 
-$sql =  "SELECT fac_id, fac_name FROM facility WHERE fac_id > 0";
+$sql =  "SELECT fac_id, fac_name, opening_hours FROM facility WHERE fac_id > 0";
 
 $result = mysqli_query($conn, $sql);
 if (false===$result) {
