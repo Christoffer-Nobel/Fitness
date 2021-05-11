@@ -1,5 +1,5 @@
 <?php
-include('nav.php'); 
+include('connect.php');
 $first = $_POST['fname'];
 $last = $_POST['lname'];
 $phone_number = $_POST['phone_number'];
@@ -12,4 +12,4 @@ $role = $_POST['role'];
 $sql = "INSERT INTO members (first_name, last_name, phone_number, email, postal, adress, dob, role) VALUES ('$first', '$last', '$phone_number', '$email', '$postal', '$adress', '$dob', '$role');";
 mysqli_query($conn, $sql);
 
-header("Location: ./members.php");
+// header("Location: ./members.php");
