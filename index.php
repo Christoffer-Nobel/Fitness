@@ -4,7 +4,7 @@
 define("DBHOST", "localhost");
 define("DBUSER", "root");
 define("DBPASS", "root");
-define("DBNAME", "webshop");
+define("DBNAME", "fitness");
 
 //inkluderer funkntions.php med alle funktioner
 include("functions.php");
