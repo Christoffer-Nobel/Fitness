@@ -4,10 +4,17 @@ include('nav.php');
 
 $equips = get_equip();
 
-foreach($equips as $equip){
-  ?><h3> <?php echo "facility:" . " " . $equip["fac_name"]; ?></h3> <?php
+$facs = get_fac();
 
-  echo "equipment type:" . " " . $equip["type"];
+foreach($facs as $fac){
+  echo $fac["fac_name"];
+
+foreach($equips as $equip){
+  if ($equip["fac_id"] == $fac["fac_id"]){
+
+?> <li> <?php  echo $equip["type"]; ?> </li> <?php
+}
+}
 ?>
 <br>
 <?php } ?>
