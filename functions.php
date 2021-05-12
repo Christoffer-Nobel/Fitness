@@ -56,6 +56,25 @@ if (false===$result) {
 return $products;
 }
 
+function get_memb(){
+
+global $conn;
+$products = [];
+
+$sql =  "SELECT first_name, last_name, role_title, membership_type, phone_number, email, postal, adress, dob, creation_date FROM membersview WHERE member_id > 0";
+
+$result = mysqli_query($conn, $sql);
+if (false===$result) {
+  printf(mysqli_error($conn));
+} elseif(mysqli_num_rows($result) > 0){
+  while($row = mysqli_fetch_assoc($result)){
+
+    $products[] = $row;
+  }
+  }
+return $products;
+}
+
 function debug($data)  {
 echo '<pre>';
 print_r($data);

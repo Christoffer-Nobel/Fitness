@@ -1,33 +1,18 @@
 <?php
 include('connect.php');
 include('nav.php');
- ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-      <div class="create-user-form">
-        <h2>Create user</h2>
-          <form  action="members.inc.php" method="POST">
-            <input type="text" name="fname" placeholder="First name"><br>
-            <input type="text" name="lname" placeholder="Last name"><br>
-            <input type="tel" name="phone_number" placeholder="Phone number"><br>
-            <input type="email" name="email" placeholder="e-mail"><br>
-            <input type="number" name="postal" placeholder="Postal" min="1000" max="9999"><br>
-            <input type="text" name="adress" placeholder="Adress"><br>
-            <input type="date" name="dob" placeholder="Date of birth"><br>
-            <input type="radio" id="member" name="role" value="1">
-            <label for="member">Member</label><br>
-            <input type="radio" id="staff" name="role" value="2">
-            <label for="staff">Staff</label><br>
-            <input type="radio" id="derfuhrer" name="role" value="3">
-            <label for="derfuhrer">Der führer</label><br>
-            <button type="submit" name="submit">Create</button><br>
-          </form>
-      </div>
-  </body>
-</html>
+$membs = get_memb();
+
+foreach($membs as $memb){
+?> <h3> <?php  echo  $memb["first_name"] . " " . $memb["last_name"]; ?> </h3> <?php
+?> <li> <?php  ?> <b> <?php echo "Role: "; ?> </b> <?php echo $memb["role_title"];?> </li> <?php
+?> <li> <?php  ?> <b> <?php echo "Membership type: "; ?> </b> <?php echo $memb["membership_type"];?> </li> <?php
+?> <li> <?php  ?> <b> <?php echo "Phone number: "; ?> </b> <?php echo $memb["phone_number"];?> </li> <?php
+?> <li> <?php  ?> <b> <?php echo "Email: "; ?> </b> <?php echo $memb["email"];?> </li> <?php
+?> <li> <?php  ?> <b> <?php echo "Postal: "; ?> </b> <?php echo $memb["postal"];?> </li> <?php
+?> <li> <?php  ?> <b> <?php echo "Adress: "; ?> </b> <?php echo $memb["adress"];?> </li> <?php
+?> <li> <?php  ?> <b> <?php echo "Date of birth: "; ?> </b> <?php echo $memb["dob"];?> </li> <?php
+?> <li> <?php  ?> <b> <?php echo "Creation date: "; ?> </b> <?php echo $memb["creation_date"];?> </li> <?php
+}
+?>
