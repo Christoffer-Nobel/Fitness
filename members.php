@@ -1,5 +1,6 @@
 <?php
 include('connect.php');
+include('nav.php');
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -28,7 +29,5 @@ include('connect.php');
             <button type="submit" name="submit">Create</button><br>
           </form>
       </div>
-<?php
-include('nav.php'); ?>
   </body>
 </html>
